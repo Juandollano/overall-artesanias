@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="es-PY">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Tienda — Casa Over All</title>
+<meta name="description" content="Tienda online de artesanía paraguaya: ñandutí, ao po’i, encaje ju, hamacas, cerámica, madera, cuero, filigrana y más.">
+<meta property="og:title" content="Tienda — Casa Over All">
+<meta property="og:description" content="Tienda online de artesanía paraguaya: ñandutí, ao po’i, encaje ju, hamacas, cerámica, madera, cuero, filigrana y más.">
+<meta name="theme-color" content="#3e6d52">
+<link rel="icon" href="img/logo-verde.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Allison&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css?v=10">
+</head>
+<body data-pagina="tienda">
+<div id="cabecera"></div>
+<main id="contenido">
+<section class="pagina-cab"><div class="contenedor">
+  <nav class="migas" aria-label="Ruta" data-migas-tienda></nav>
+  <h1 data-titulo>Tienda</h1><p data-subtitulo>Artesanía paraguaya auténtica, hecha a mano.</p>
+</div></section>
+<div class="contenedor tienda">
+  <aside class="filtros" id="filtros" aria-label="Filtros">
+    <div class="filtros__bloque"><h2>Categorías</h2><ul class="lista-cat" data-cats></ul></div>
+    <div class="filtros__bloque"><h2>Material o técnica</h2><div class="chips" data-materiales></div></div>
+    <div class="filtros__bloque"><h2>Ambientes</h2><div class="chips" data-ambientes></div></div>
+  </aside>
+  <div>
+    <div class="barra-res">
+      <div class="barra-res__izq">
+        <button class="btn btn--borde filtros-btn" type="button" aria-expanded="false" aria-controls="filtros">Filtros</button>
+        <form id="form-busqueda" role="search"><label class="visually-hidden" for="q">Buscar en la tienda</label><input type="search" id="q" placeholder="Buscar productos…" autocomplete="off"></form>
+        <p data-info aria-live="polite"></p>
+      </div>
+      <div class="barra-res__izq">
+        <label class="check"><input type="checkbox" id="disp"> Solo disponibles</label>
+        <label class="visually-hidden" for="orden">Ordenar por</label>
+        <select id="orden">
+          <option value="recientes">Más recientes</option>
+          <option value="precio-asc">Precio: menor a mayor</option>
+          <option value="precio-desc">Precio: mayor a menor</option>
+          <option value="nombre">Nombre (A–Z)</option>
+        </select>
+      </div>
+    </div>
+    <div class="grid-prod" data-grid></div>
+    <div class="cargar-mas" data-mas hidden><button class="btn btn--borde" type="button">Cargar más productos</button></div>
+  </div>
+</div>
+</main>
+<div id="pie"></div>
+<script src="js/data.js?v=10"></script>
+<script src="js/categorias.js?v=10"></script>
+<script src="js/app.js?v=10"></script>
+</body>
+</html>
